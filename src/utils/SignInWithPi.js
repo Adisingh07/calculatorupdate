@@ -9,13 +9,14 @@ export const usePiSignIn = () => {
   const signIn = async () => {
     try {
       const scopes = ["username", "payments"];
+       const backendUrl = "https://backend-3e4n.onrender.com"; 
 
       // Authenticate with Pi Network
       const { accessToken } = await Pi.authenticate(scopes, onIncompletePaymentFound);
 
       // Verify token with your backend
       const res = await axios.post(
-        `${import.meta.env.REACT_APP_BACKEND_URL}/verify-token`,
+        `${backendUrl}/verify-token`,
         { accessToken }
       );
 
