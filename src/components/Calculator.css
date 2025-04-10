@@ -1,0 +1,164 @@
+.advanced-calculator-container {
+    background-color: #282a36; /* Dracula background */
+    color: #f8f8f2; /* Dracula foreground */
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    width: 350px; /* Adjust width as needed */
+    margin: 20px auto; /* Center the calculator */
+    position: relative; /* For potential z-index adjustments */
+     /* Ensure it's above the sidebar (adjust as needed) */
+  }
+  
+  .calculator-title {
+    text-align: center;
+    margin-bottom: 15px;
+    color: #bd93f9; /* Dracula purple */
+  }
+  
+  .calculator-input {
+    width: calc(100% - 20px);
+    padding: 15px;
+    margin-bottom: 15px;
+    font-size: 1.8em;
+    text-align: right;
+    border: none;
+    border-radius: 8px;
+    background-color: #44475a; /* Dracula selection */
+    color: #f8f8f2;
+    outline: none;
+  }
+  
+  .calculator-buttons {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 5 columns for the layout */
+    gap: 10px;
+  }
+  
+  .calculator-buttons button {
+    padding: 12px;
+    font-size: 1.1em;
+    border: none;
+    border-radius: 8px;
+    background-color: #44475a;
+    color: #f8f8f2;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+  }
+  
+  .calculator-buttons button:hover {
+    background-color: #6272a4; /* Dracula comment */
+  }
+  
+  .calculator-buttons button:active {
+    background-color: #bd93f9; /* Dracula purple */
+    transform: scale(0.95);
+  }
+  
+  /* Specific button styles */
+  .clear-button {
+    background-color: #ff5555; /* Dracula red */
+    color: #282a36;
+  }
+  
+  .clear-button:hover {
+    background-color: #ff79c6; /* Dracula pink */
+  }
+  
+  .delete-button {
+    background-color: #f1fa8c; /* Dracula yellow */
+    color: #282a36;
+  }
+  
+  .delete-button:hover {
+    background-color: #bd93f9; /* Dracula purple */
+  }
+  
+  .equals-button {
+    background-color: #50fa7b; /* Dracula green */
+    color: #282a36;
+  }
+  
+  .equals-button:hover {
+    background-color: #f1fa8c; /* Dracula yellow */
+  }
+  
+  .plus-button {
+    background-color: #f1fa8c; /* Dracula yellow */
+    color: #282a36;
+  }
+  
+  .plus-button:hover {
+    background-color: #bd93f9; /* Dracula purple */
+  }
+  
+  .memory-add-button,
+  .memory-subtract-button,
+  .memory-recall-button,
+  .memory-clear-button {
+    background-color: #6272a4; /* Dracula comment */
+  }
+  
+  .memory-add-button:hover,
+  .memory-subtract-button:hover,
+  .memory-recall-button:hover,
+  .memory-clear-button:hover {
+    background-color: #bd93f9; /* Dracula purple */
+  }
+  
+  /* Adjust layout for the last row */
+  .calculator-buttons button:nth-child(21), /* MR */
+  .calculator-buttons button:nth-child(22) { /* MC */
+    grid-column: span 1;
+  }
+  
+  .calculator-buttons button:nth-child(20) { /* . */
+    grid-column: span 1;
+  }
+  
+  .calculator-buttons button:nth-child(16) { /* 0 */
+    grid-column: span 1;
+  }
+  
+  .calculator-buttons button:nth-child(17) { /* = */
+    grid-column: span 1;
+  }
+  
+  .calculator-buttons button:nth-child(18) { /* + */
+    grid-column: span 1;
+  }
+  
+  .calculator-buttons button:nth-child(19) { /* M- */
+    grid-column: span 1;
+  }
+  
+  
+  .calculator-history {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 8px;
+    background-color: #44475a;
+  }
+  
+  .calculator-history h3 {
+    color: #f8f8f2;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  
+  .calculator-history ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .calculator-history li {
+    color: #f8f8f2;
+    padding: 8px 0;
+    border-bottom: 1px solid #6272a4;
+  }
+  
+  .calculator-history li:last-child {
+    border-bottom: none;
+  }
+  

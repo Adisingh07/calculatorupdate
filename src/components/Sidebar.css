@@ -1,0 +1,106 @@
+.sidebar {
+    position: fixed;
+    
+    left: -250px;
+    top: 0;
+    width: 250px;
+    height: 100vh;
+    background: #1e1e2d;
+    color: white;
+    z-index: 1;
+    transition: left 0.3s ease-in-out;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+    padding-top: 60px;
+  }
+  
+  .sidebar.open {
+    left: 0;
+  }
+  
+  .user-header {
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #555;
+    text-align: center;
+  }
+  
+  .user-header p {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+  }
+  
+  .signout-btn {
+    background-color: #d9534f; /* Reddish for sign out */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 15px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+  }
+  
+  .signout-btn:hover {
+    background-color: #c9302c; /* Darker shade on hover */
+  }
+  
+  .sidebar h2 {
+    color: #5bc0de; /* Primary color for headings */
+    margin-bottom: 15px;
+    text-align: left;
+  }
+  
+  .sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .sidebar li {
+    margin-bottom: 10px;
+  }
+  
+  .sidebar li a {
+    display: block;
+    color: #eee;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.2s ease-in-out;
+  }
+  
+  .sidebar li a:hover {
+    background-color: #555;
+  }
+  
+  /* Adjust main content to accommodate the sidebar */
+  /* You might need to apply these styles to a container wrapping your main content */
+  .main-content-area {
+    margin-left: 0; /* Initially no margin */
+    transition: margin-left 0.3s ease-in-out;
+    padding: 20px; /* Add some default padding */
+  }
+  
+  .main-content-area.sidebar-open {
+    margin-left: 250px; /* Shift content when sidebar is open */
+  }
+  
+  /* Responsive adjustments */
+  @media (min-width: 768px) {
+    .sidebar-toggle {
+      display: none; /* Hide toggle on larger screens if sidebar is always visible */
+    }
+  
+    .sidebar {
+      left: 0; /* Always visible on larger screens */
+      box-shadow: none;
+    }
+  
+    .main-content-area {
+      margin-left: 250px; /* Adjust margin for always visible sidebar */
+    }
+  
+    .main-content-area.sidebar-open {
+      margin-left: 250px; /* No extra shift needed */
+    }
+  }

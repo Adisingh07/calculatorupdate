@@ -1,0 +1,70 @@
+.converter {
+    background-color: #282a36; /* Dracula background */
+    color: #f8f8f2; /* Dracula foreground */
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    width: 400px; /* Adjust width as needed */
+    margin: 30px auto; /* Center the converter */
+    font-family: sans-serif;
+  }
+  
+  .converter h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #bd93f9; /* Dracula purple */
+  }
+  
+  .converter input[type="number"] {
+    width: calc(100% - 22px);
+    padding: 12px;
+    margin-bottom: 20px;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 8px;
+    background-color: #44475a; /* Dracula selection */
+    color: #f8f8f2;
+    outline: none;
+  }
+  
+  .converter select {
+    padding: 12px;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 8px;
+    background-color: #44475a; /* Dracula selection */
+    color: #f8f8f2;
+    outline: none;
+    margin-right: 10px;
+  }
+  
+  .converter span {
+    margin: 0 10px;
+    font-size: 1.2em;
+    color: #f8f8f2;
+  }
+  
+  .converter button {
+    padding: 15px 25px;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 8px;
+    background-color: #50fa7b; /* Dracula green */
+    color: #282a36;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+    margin-top: 20px;
+    width: 100%;
+  }
+  
+  .converter button:hover {
+    background-color: #f1fa8c; /* Dracula yellow */
+    color: #282a36;
+  }
+  
+  .converter h3 {
+    margin-top: 25px;
+    font-size: 1.4em;
+    color: #f8f8f2;
+    text-align: center;
+  }

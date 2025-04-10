@@ -1,0 +1,66 @@
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh; /* Ensure it takes at least the full viewport height */
+  padding: 30px; /* Adjust padding */
+  background: #222; /* Match privacy container background */
+  border-radius: 10px; /* Match privacy container border-radius */
+  color: white; /* Match privacy container color */
+  box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2); /* Match privacy container box-shadow */
+  text-align: center; /* Center text within the home container */
+  font-family: sans-serif; /* Add a readable font */
+  margin: 50px auto; /* Center the container on the page */
+  max-width: 800px; /* Match privacy container max-width */
+}
+
+.home-container h1 {
+  color: #00aaff; /* Match privacy container h1, h2 color */
+  margin-bottom: 20px;
+  font-size: 2.5em;
+}
+
+.home-container p {
+  font-size: 1em; /* Use 'em' for relative sizing */
+  line-height: 1.6; /* Match privacy container line-height */
+  margin-bottom: 15px;
+  opacity: 0.9; /* Slightly soften the text */
+}
+
+.sign-in-btn {
+  padding: 15px 30px;
+  font-size: 1.2em;
+  border: none;
+  border-radius: 8px;
+  background-color: #00aaff; /* Use the primary color */
+  color: #222; /* Dark text on the primary background */
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+.sign-in-btn:hover {
+  background-color: #0077cc; /* Darker shade for hover */
+  color: white;
+}
+
+.user-info {
+  margin-top: 30px;
+  padding: 25px;
+  border-radius: 8px;
+  background-color: #333; /* Slightly lighter than the main background */
+  box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1);
+  text-align: center;
+}
+
+.user-info h3 {
+  color: #00aaff; /* Match primary color */
+  margin-bottom: 15px;
+  font-size: 1.8em;
+}
+
+.user-info p {
+  font-size: 1em;
+  opacity: 0.8;
+  margin-bottom: 10px;
+}

@@ -1,0 +1,51 @@
+/* General styles */
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #1e1e1e;
+  color: white;
+}
+
+/* Main container to structure the layout */
+.app-container {
+  display: flex;
+}
+
+/* Content area */
+.content {
+  flex-grow: 1;
+  padding: 20px;
+  width: 100%;
+  transition: margin-left 0.3s;
+}
+
+/* Ensure content is pushed when sidebar opens */
+.content.shifted {
+  margin-left: 250px;
+}
+
+/* Button to toggle sidebar */
+.sidebar-toggle {
+  position: fixed;
+  left: 10px;
+  top: 10px;
+  background: #007bff;
+  color: white;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  z-index: 1000;
+  transition: 0.3s;
+}
+
+.sidebar-toggle:hover {
+  background: #0056b3;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .content {
+    margin-left: 0; /* No extra margin in mobile view */
+  }
+}
