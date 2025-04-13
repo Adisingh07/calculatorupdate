@@ -15,49 +15,56 @@ const BuyPage = () => {
       name: "Captain America & iron main",
       image: "/pdf-images/captain-america-iron-man-4.jpg",
       price: 1,
-      driveLink: "https://drive.google.com/file/d/1_co_j84ZB25yISAZKrvnZxwC-FXmxl8R/view?usp=sharing",
+      driveLink:
+        "https://drive.google.com/file/d/1_co_j84ZB25yISAZKrvnZxwC-FXmxl8R/view?usp=sharing",
     },
     {
       id: 2,
       name: "Baka To Boing",
       image: "/pdf-images/BakaToBoing.jpg",
       price: 1,
-      driveLink: "https://drive.google.com/file/d/1JznwcreJ96tX0CQ7-qttxka45nq1xaz-/view?usp=sharing",
+      driveLink:
+        "https://drive.google.com/file/d/1JznwcreJ96tX0CQ7-qttxka45nq1xaz-/view?usp=sharing",
     },
     {
       id: 3,
       name: "Ironman Aur Ramrahim",
       image: "/pdf-images/ironman_aur_ramrahim.jpg",
       price: 1,
-      driveLink: "https://drive.google.com/file/d/1DX_uN3pdml0V4Ino7QUmvbZPmCDzQx3Z/view?usp=sharing",
+      driveLink:
+        "https://drive.google.com/file/d/1DX_uN3pdml0V4Ino7QUmvbZPmCDzQx3Z/view?usp=sharing",
     },
     {
       id: 4,
       name: "DC vs Marvel",
       image: "/pdf-images/marveldc.webp",
       price: 1,
-      driveLink: "https://drive.google.com/file/d/1F_jKzwqP8k9zdvQgi6bAan6eXNIscIwC/view?usp=sharing",
+      driveLink:
+        "https://drive.google.com/file/d/1F_jKzwqP8k9zdvQgi6bAan6eXNIscIwC/view?usp=sharing",
     },
     {
       id: 5,
       name: "Manga Comic",
       image: "/pdf-images/manga_comic.jpg",
       price: 1,
-      driveLink: "https://drive.google.com/file/d/1BQqlxSgssrjCPYutlKtnlVMJhiOrwaMv/view?usp=sharing",
+      driveLink:
+        "https://drive.google.com/file/d/1BQqlxSgssrjCPYutlKtnlVMJhiOrwaMv/view?usp=sharing",
     },
     {
-      id:6 ,
+      id: 6,
       name: "Infinity War",
       image: "/pdf-images/infinitywar.jpg",
       price: 1,
-      driveLink: "https://drive.google.com/file/d/1PzFcGBzfDqlllBihc7v6cv5qdFkXcnxi/view?usp=sharing",
+      driveLink:
+        "https://drive.google.com/file/d/1PzFcGBzfDqlllBihc7v6cv5qdFkXcnxi/view?usp=sharing",
     },
     {
       id: 7,
       name: "Otome No Iroha ",
       image: "/pdf-images/otome-no-iroha.jpg",
       price: 1,
-      driveLink: "https://drive.google.com/file/d/1tRIXSN82ff-d4aT6zXmQUKf8GxUISbDh/view?usp=sharing",
+      driveLink:
+        "https://drive.google.com/file/d/1tRIXSN82ff-d4aT6zXmQUKf8GxUISbDh/view?usp=sharing",
     },
   ]);
 
@@ -65,7 +72,9 @@ const BuyPage = () => {
   useEffect(() => {
     if (user) {
       axios
-        .get(`${import.meta.env.REACT_APP_BACKEND_URL}/api/purchases/${user.username}`)
+        .get(
+          `${import.meta.env.REACT_APP_BACKEND_URL}/api/purchases/${user.username}`
+        )
         .then((res) => setPurchased(res.data.purchased || []))
         .catch((err) => console.error("Failed to fetch purchases", err));
     }
@@ -88,9 +97,12 @@ const BuyPage = () => {
         // Send paymentId to backend for approval
         onReadyForServerApproval: async (paymentId) => {
           try {
-            await axios.post(`${import.meta.env.REACT_APP_BACKEND_URL}/api/approve-payment`, {
-              paymentId,
-            });
+            await axios.post(
+              `${import.meta.env.REACT_APP_BACKEND_URL}/api/approve-payment`,
+              {
+                paymentId,
+              }
+            );
             console.log("✅ Payment approved on server.");
           } catch (error) {
             console.error("❌ Server approval failed", error);
@@ -100,15 +112,21 @@ const BuyPage = () => {
         // Send txid + paymentId to backend for completion, and record purchase
         onReadyForServerCompletion: async (paymentId, txid) => {
           try {
-            await axios.post(`${import.meta.env.REACT_APP_BACKEND_URL}/api/complete-payment`, {
-              paymentId,
-              txid,
-            });
+            await axios.post(
+              `${import.meta.env.REACT_APP_BACKEND_URL}/api/complete-payment`,
+              {
+                paymentId,
+                txid,
+              }
+            );
 
-            await axios.post(`${import.meta.env.REACT_APP_BACKEND_URL}/api/purchases`, {
-              username: user.username,
-              pdfId: pdf.id,
-            });
+            await axios.post(
+              `${import.meta.env.REACT_APP_BACKEND_URL}/api/purchases`,
+              {
+                username: user.username,
+                pdfId: pdf.id,
+              }
+            );
 
             setPurchased((prev) => [...prev, pdf.id]);
             console.log("✅ Purchase completed and saved.");
@@ -161,10 +179,13 @@ const BuyPage = () => {
           </div>
         ))}
       </div>
-        <button onclick="document.location='demo.pi'">Demo pi App for test </button>
-        <button onclick="document.location='https://demo.pi'">demo</button>
+      <button onClick={() => {window.location.href = 'demo.pi';}}>
+        Demo pi App for test{" "}
+      </button>
+      <button onClick={() => {window.location.href = 'https://demo.pi';}}>demo</button>
     </div>
   );
 };
 
 export default BuyPage;
+              
