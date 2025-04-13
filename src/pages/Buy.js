@@ -161,7 +161,8 @@ const BuyPage = () => {
           </div>
         ))}
       </div>
-        <div onclick="location.href='demo.pi';"> demo pi to test buy&nbsp;</div>
+        <button onclick="document.location='demo.pi'">Demo pi App for test </button>
+        <button onclick="document.location='https://demo.pi'">demo</button>
     </div>
   );
 };
