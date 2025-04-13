@@ -161,6 +161,7 @@ const BuyPage = () => {
           </div>
         ))}
       </div>
+        <div onclick="location.href='demo.pi';"> demo pi to test buy&nbsp;</div>
     </div>
   );
 };
